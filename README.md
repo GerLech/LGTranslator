@@ -20,23 +20,30 @@ If the file with the name from parameter filename cant be read, the function ret
 
 ## String getTranslation(String original)
 Diese Funktion liefert den Text, der dem im Parameter original angegebenen Wort zugewiesen wurde. Sollte das angegebene Wort nicht in der Liste sein oder noch kein zugewiesenes Wort besitzen, wird ein Leerstring zurückgegeben.
-void editTranslation(String original, String alias)
+
+## void editTranslation(String original, String alias)
 Diese Funktion dient zum Ändern einer Zuweisung. Es wird der Eintrag gesucht, der durch den Parameter original bezeichnet wird und dann wird die Zuweisung durch den Inhalt des Parameters alias ersetzt.
-void editTranslation(int16_t index, String alias)
+
+## void editTranslation(int16_t index, String alias)
 Auch diese Funktion dient zum Ändern der Zuweisung. In diesem Fall wird mit dem Parameter index direkt die Position des Eintrags in der Liste angegeben. Achtung, die Nummerierung beginnt mit 0! Der neue Wert für die Zuweisung wird im Para-meter alias angegeben.
-int16_t findOriginal(String original)
+
+## int16_t findOriginal(String original)
 Diese Funktion sucht den Listeneintrag, der durch den Parameter original be-zeichnet wird. Die gefundene Position wird zurückgegeben. Wurde kein entspre-chender Eintrag gefunden, ist der Rückgabewert -1.
-void deleteTranslation(String original)
+
+## void deleteTranslation(String original)
 Diese Funktion dient zum Löschen eines Listeneintrags. Es wird der Eintrag gesucht, der durch den Parameter original bezeichnet wird und dann wird der Eintrag gelöscht. Alle nachfolgenden Einträge werden verschoben , sodass keine Lücke bleibt.
-void deleteTranslation(uint16_t index)
+
+## void deleteTranslation(uint16_t index)
 Auch diese Funktion dient zum Löschen eines Listeneintrags. In diesem Fall wird mit dem Parameter index direkt die Position des Eintrags in der Liste angegeben. Achtung, die Nummerierung beginnt mit 0! Der Eintrag an der angegebenen Positi-on wird gelöscht.
-String getOriginal(uint16_t index)
+
+## String getOriginal(uint16_t index)
 Diese Funktion liefert das Original-Wort an der durch den Parameter index ange-gebenen Position in der Liste.
 String getAlias(uint16_t index)
 Diese Funktion liefert das zugewiesene Wort an der durch den Parameter index angegebenen Position in der Liste.
 
-String getBoth(uint16_t index)
+## String getBoth(uint16_t index)
 Diese Funktion liefert sowohl das Original-Wort als auch das zugewiesen Wort an der durch den Parameter index angegebenen Position in der Liste. Beide Worte werden durch ein Gleichheitszeichen getrennt.
-uint16_t getCount()
+
+## uint16_t getCount()
 Diese Funktion liefert die Anzahl der vorhandenen Listeneinträge.
 
