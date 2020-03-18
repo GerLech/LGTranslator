@@ -1,5 +1,5 @@
 # LGTranslator
-This Library defines a class which manages a reference table. The table allows 100 entries as a maximum. Every entry has an original string and an associated alias string. The library can be used to retrieve the alias string for a given original string. The compete table can be saved to the SPIFFS and also read from there. The class has the following public member functions.
+This Library defines a class which manages a reference table. The table allows 100 entries as a maximum. Every entry has an original string and an associated alias string. The library can be used to retrieve the alias string for a given original string. The complete table can be saved to the SPIFFS and also read from there. The class has the following public member functions.
 
 ## LGTranslator()
 class constructor. It has no oparameters
