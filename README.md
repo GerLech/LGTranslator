@@ -19,31 +19,31 @@ This function saves the complete list to the SPIFFS using the parameter filename
 If the file with the name from parameter filename cant be read, the function returns false. Otherwise the complete list will be read from SPIFFS. Existing entries will be overwritten.
 
 ## String getTranslation(String original)
-Diese Funktion liefert den Text, der dem im Parameter original angegebenen Wort zugewiesen wurde. Sollte das angegebene Wort nicht in der Liste sein oder noch kein zugewiesenes Wort besitzen, wird ein Leerstring zurückgegeben.
+This function returns the alias string associated with the string in the parameter original. If the original string is not in the list, the function returns an empty string.
 
 ## void editTranslation(String original, String alias)
-Diese Funktion dient zum Ändern einer Zuweisung. Es wird der Eintrag gesucht, der durch den Parameter original bezeichnet wird und dann wird die Zuweisung durch den Inhalt des Parameters alias ersetzt.
+With this function an entry in the list can be modified. The alias string for the entry with the original string given by the parameter original will be replaced with the string from parameter alias. If the original string is not in the list, the function does nothing.
 
 ## void editTranslation(int16_t index, String alias)
-Auch diese Funktion dient zum Ändern der Zuweisung. In diesem Fall wird mit dem Parameter index direkt die Position des Eintrags in der Liste angegeben. Achtung, die Nummerierung beginnt mit 0! Der neue Wert für die Zuweisung wird im Para-meter alias angegeben.
+This function sets the alias string of the list entry with the given index. The alias string gets the value from parameter alias. 
 
 ## int16_t findOriginal(String original)
-Diese Funktion sucht den Listeneintrag, der durch den Parameter original be-zeichnet wird. Die gefundene Position wird zurückgegeben. Wurde kein entspre-chender Eintrag gefunden, ist der Rückgabewert -1.
+This function returns the index of the list entry with the original string given in the parameter original. If no such entry exists, teh function returns -1.
 
 ## void deleteTranslation(String original)
-Diese Funktion dient zum Löschen eines Listeneintrags. Es wird der Eintrag gesucht, der durch den Parameter original bezeichnet wird und dann wird der Eintrag gelöscht. Alle nachfolgenden Einträge werden verschoben , sodass keine Lücke bleibt.
+This function removes the entry with the original string given by the parameter original. All entries after the deleted entry will be moved so that no gap remains. If the no entry matches the parameter original, nothing will be changed.
 
 ## void deleteTranslation(uint16_t index)
-Auch diese Funktion dient zum Löschen eines Listeneintrags. In diesem Fall wird mit dem Parameter index direkt die Position des Eintrags in der Liste angegeben. Achtung, die Nummerierung beginnt mit 0! Der Eintrag an der angegebenen Positi-on wird gelöscht.
+This function removes the entry with the index given by the parameter index. All entries after the deleted entry will be moved so that no gap remains. If the parameter index is outside the number of list entries, nothing will be changed.
 
 ## String getOriginal(uint16_t index)
-Diese Funktion liefert das Original-Wort an der durch den Parameter index ange-gebenen Position in der Liste.
-String getAlias(uint16_t index)
-Diese Funktion liefert das zugewiesene Wort an der durch den Parameter index angegebenen Position in der Liste.
+This function returns the original string of the entry at the given index. If the parameter index is outside the number of list entries, an empty string will be returned.
+
+## String getAlias(uint16_t index)
+This function returns the alias string of the entry at the given index. If the parameter index is outside the number of list entries, an empty string will be returned.
 
 ## String getBoth(uint16_t index)
-Diese Funktion liefert sowohl das Original-Wort als auch das zugewiesen Wort an der durch den Parameter index angegebenen Position in der Liste. Beide Worte werden durch ein Gleichheitszeichen getrennt.
+This function returns the original string and the alias string of the entry at the given index. Both strings will be separated by an equal sign. If the parameter index is outside the number of list entries, an empty string will be returned.
 
 ## uint16_t getCount()
-Diese Funktion liefert die Anzahl der vorhandenen Listeneinträge.
-
+This function returns the number of entries in the list.
